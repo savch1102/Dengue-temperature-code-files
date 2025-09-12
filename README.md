@@ -6,7 +6,7 @@ A repository for R and Python code, scripts and data from the manuscript “Temp
 
 This work investigates:
 
-+ Temperature-dependent functional traits of Ae. aegypti and Ae. albopictus (biting rate, survival, development, reproduction, mortality).
++ Temperature-dependent functional traits of *Ae. aegypti* and *Ae. albopictus*.
 + Invasion and coexistence analyses under climate-driven conditions.
 + Impacts of species interactions and temperature on dengue outbreaks in human populations.
 
