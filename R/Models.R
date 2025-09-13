@@ -100,6 +100,32 @@ ggplot(output_df, aes(x = time)) +
   scale_color_manual(values = c("firebrick", "olivedrab", "grey68", "royalblue")) +
   guides(color = guide_legend(title = "SEIR Compartments"))
 
+# Plot results for larval populations (Aedes aegypti and Aedes albopictus)
+ggplot(output_df, aes(x = time)) +
+  geom_line(aes(y = L_ae, color = "Larvae Aedes aegypti"), linewidth = 1) +
+  geom_line(aes(y = L_alb, color = "Larvae Aedes albopictus"), linewidth = 1) +
+  labs(title = "Larval Populations", x = "Time (days)", y = "Larvae Population") +
+  theme_linedraw() +
+  scale_color_manual(values = c("purple", "orange")) +
+  guides(color = guide_legend(title = "Larvae"))
+
+# Plot results for adult populations (Aedes aegypti and Aedes albopictus)
+ggplot(output_df, aes(x = time)) +
+  geom_line(aes(y = X_ae, color = "Adults Aedes aegypti"), linewidth = 1) +
+  geom_line(aes(y = X_alb, color = "Adults Aedes albopictus"), linewidth = 1) +
+  labs(title = "Adult Populations", x = "Time (days)", y = "Adult Population") +
+  theme_linedraw() +
+  scale_color_manual(values = c("purple", "orange")) +
+  guides(color = guide_legend(title = "Adults"))
+
+# Plot results for infected adult populations (Aedes aegypti and Aedes albopictus)
+ggplot(output_df, aes(x = time)) +
+  geom_line(aes(y = Y_ae, color = "Infected Adults Aedes aegypti"), linewidth = 1) +
+  geom_line(aes(y = Y_alb, color = "Infected Adults Aedes albopictus"), linewidth = 1) +
+  labs(title = "Infected Adult Populations", x = "Time (days)", y = "Infected Adult Population") +
+  theme_linedraw() +
+  scale_color_manual(values = c("purple", "orange")) +
+  guides(color = guide_legend(title = "Infected Adults"))
 
 
 ###------------------ Temperature model
